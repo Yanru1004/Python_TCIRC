@@ -1,3 +1,5 @@
-switch = int(input())
+ int(input())
 
-print((switch+1)%2)
+num = list(map(int,input().split(' ')))
+
+print(max(num))
