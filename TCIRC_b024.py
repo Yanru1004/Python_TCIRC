@@ -8,9 +8,13 @@ t = (start//100)*60 + start % 100
 
 end_t = (end//100)*60 + end % 100
 
+#修正結束時間過午夜情況
+if end_t < t:
+    end_t += 1440 #24hr = 1440min
+
 while t < end_t:
 
-    print(f'{t//60:02d}{t%60:02d}')
+    print(f'{(t//60)%24:02d}{t%60:02d}')
     
     t+= 5
 
